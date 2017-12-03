@@ -1,0 +1,7 @@
+int64 led_id
+int64 color
+int64 brightness
+---
+int64 led_id
+int64 color
+int64 brightness
