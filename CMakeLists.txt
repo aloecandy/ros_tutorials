@@ -5,6 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   message_runtime
   roscpp
+  visualization_msgs
   sensor_msgs
 )
 
@@ -13,12 +14,13 @@ add_service_files(FILES led.srv)
 generate_messages(
   DEPENDENCIES
   sensor_msgs
+  visualization_msgs
 )
 
 catkin_package(
 #  INCLUDE_DIRS include
   LIBRARIES pi
-  CATKIN_DEPENDS message_generation message_runtime roscpp sensor_msgs
+  CATKIN_DEPENDS message_generation message_runtime roscpp sensor_msgs visualization_msgs
 #  DEPENDS system_lib
 )
 
@@ -28,7 +30,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(led src/led.cpp)
+add_executable(led src/ws2812b.cpp src/led.cpp)
 add_dependencies(led ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(led ${catkin_LIBRARIES})
 
