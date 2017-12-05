@@ -83,15 +83,16 @@ int main(int argc, char **argv)
         marker.pose.orientation.y = 0.0;
         marker.pose.orientation.z = 0.0;
         marker.pose.orientation.w = 1.0;
-        marker.scale.x = 0.005;
-        marker.scale.y = 0.005;
-        marker.scale.z = 0.005;
+        marker.scale.x = 0.000;
+        marker.scale.y = 0.000;
+        marker.scale.z = 0.000;
         marker.color.a = 1.0; // Don't forget to set the alpha!
         marker.color.r = 0.0;
         marker.color.g = 0.0;
         marker.color.b = 0.0;
         marker.mesh_resource = "package://pr2_description/meshes/base_v0/base.dae";
         markerArray.markers[i]=marker;
+        ws2812b_set_static_led(i,0,0);
     }    
        
     while(ros::ok())
