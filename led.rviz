@@ -5,8 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /RobotModel1/Links1
-        - /MarkerArray1
+        - /Status1
         - /MarkerArray1/Status1
       Splitter Ratio: 0.5
     Tree Height: 565
@@ -60,21 +59,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        front_caster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        front_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         led_id_0:
           Alpha: 1
           Show Axes: false
@@ -120,39 +104,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        left_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rear_caster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rear_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/Axes
-      Enabled: false
-      Length: 1
-      Name: Axes
-      Radius: 0.100000001
-      Reference Frame: <Fixed Frame>
-      Value: false
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: visualization_markers
@@ -164,7 +121,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: led_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -185,7 +142,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.66489983
+      Distance: 0.247067794
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -200,10 +157,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.509797096
+      Pitch: 0.425397873
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.0335719883
+      Yaw: 6.21858263
     Saved: ~
 Window Geometry:
   Displays:
@@ -221,5 +178,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 65
-  Y: 60
+  X: 1985
+  Y: 46
