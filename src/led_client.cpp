@@ -11,6 +11,11 @@ int main(int argc, char **argv)
     
     ros::NodeHandle scn;
 
+	srv.request.led_id=atoi(0);
+    srv.request.color=atoi(255);
+    srv.request.brightness=atoi(255);
+	sc.call(srv);
+	/*
     sc=scn.serviceClient<pi::led>("led");
     if(argc==4){
     srv.request.led_id=atoi(argv[1]);
@@ -25,6 +30,6 @@ int main(int argc, char **argv)
     else{
         ROS_ERROR("Failed to call service");
     }
-
+*/
   return 0;
 }
