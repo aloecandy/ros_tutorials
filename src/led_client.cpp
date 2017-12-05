@@ -11,9 +11,9 @@ int main(int argc, char **argv)
     
     ros::NodeHandle scn;
 
-	srv.request.led_id=atoi(0);
-    srv.request.color=atoi(255);
-    srv.request.brightness=atoi(255);
+	srv.request.led_id=4;
+    srv.request.color=255;
+    srv.request.brightness=255;
 	sc.call(srv);
 	/*
     sc=scn.serviceClient<pi::led>("led");
