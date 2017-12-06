@@ -8,8 +8,8 @@ pi::led srv;
 void callback(const sensor_msgs::Range::ConstPtr& msg)
 {
   ROS_INFO("distance = %fm", msg->range); 
-//  int num=((msg->range)*20;
-  for(int i=0;i<8;i++){
+  int num=((msg->range)*20;
+  for(int i=0;i<num;i++){
     if(i==8)  break;
     srv.request.led_id=i;
     srv.request.color=255;
