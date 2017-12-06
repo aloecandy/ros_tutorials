@@ -8,7 +8,7 @@
 
 float read(){
 	int time=0;
-	int dist=0;
+	float dist=0;
 	digitalWrite(trig_pin,LOW);
 	delayMicroseconds(2);
 	digitalWrite(trig_pin,HIGH);
@@ -26,6 +26,7 @@ float read(){
 	}
 	dist = (time*0.1657);
 	if(dist>5000 || dist==0) return -1;
+	
 	return dist/1000;
 }
 int main(int argc, char **argv)
