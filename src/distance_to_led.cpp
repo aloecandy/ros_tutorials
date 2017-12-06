@@ -8,17 +8,17 @@ pi::led srv;
 void callback(const sensor_msgs::Range::ConstPtr& msg)
 {
   ROS_INFO("distance = %fm", msg->range); 
-  int num=((msg->range)*20;
+  int num=(msg->range)*20;
   for(int i=0;i<num;i++){
     if(i==8)  break;
     srv.request.led_id=i;
-    srv.request.color=255;
+    srv.request.color=(i<num)? 255:(255<<8);
     srv.request.brightness=255;
     if((srv.request.led_id!=srv.response.led_id)||(srv.request.color!=srv.response.color)||(srv.request.brightness!=srv.response.brightness)){
         if(sc.call(srv))
         {
-            ROS_INFO("req : id=%d, color=%ld, brightness=%d",srv.request.led_id,srv.request.color,srv.request.brightness);
-            ROS_INFO("res : id=%d, color=%ld, brightness=%d",srv.response.led_id,srv.response.color,srv.response.brightness);
+            ROS_INFO("req : id=%d, color=%ld, brightness=%u",srv.request.led_id,srv.request.color,srv.request.brightness);
+            ROS_INFO("res : id=%d, color=%ld, brightness=%u",srv.response.led_id,srv.response.color,srv.response.brightness);
         }
         else{
             ROS_ERROR("Failed to call service");
