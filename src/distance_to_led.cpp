@@ -9,7 +9,6 @@ void callback(const sensor_msgs::Range::ConstPtr& msg)
 {
   ROS_INFO("distance = %fm", msg->range); 
   srv.request.led_id=5;
-  ROS_INFO("%d",num);
   srv.request.color=(msg->range<0.3)? 255:65280;
   srv.request.brightness=255;
   if((srv.request.led_id!=srv.response.led_id)||(srv.request.color!=srv.response.color)||(srv.request.brightness!=srv.response.brightness)){
