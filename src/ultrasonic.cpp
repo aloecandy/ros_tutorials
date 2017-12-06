@@ -6,7 +6,7 @@
 #define trig_pin 8  //header 3
 #define echo_pin 9  //header 5
 
-int read(){
+float read(){
 	int time=0;
 	int dist=0;
 	digitalWrite(trig_pin,LOW);
