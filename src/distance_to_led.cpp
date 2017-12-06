@@ -11,8 +11,8 @@ void callback(const sensor_msgs::Range::ConstPtr& msg)
 //  int num=((msg->range)*20;
   for(int i=0;i<8;i++){
     if(i==8)  break;
-    srv.request.led_id=i;
-    srv.request.color=255;
+    srv.request.led_id=255;
+    srv.request.color=i;
     srv.request.brightness=255;
     if((srv.request.led_id!=srv.response.led_id)||(srv.request.color!=srv.response.color)||(srv.request.brightness!=srv.response.brightness)){
         if(sc.call(srv))
@@ -36,8 +36,6 @@ int main(int argc, char **argv)
    ros::NodeHandle scn;
 
   sc=scn.serviceClient<pi::led>("led");
-  
-  
   
   ros::spin();
 
