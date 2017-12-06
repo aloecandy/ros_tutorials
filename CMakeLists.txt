@@ -35,7 +35,7 @@ add_dependencies(led ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGE
 target_link_libraries(led ${catkin_LIBRARIES})
 
 add_executable(ultrasonic src/ultrasonic.cpp)
-add_dependencies(ultrasonic ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(ultrasonic ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} wiringPi)
 target_link_libraries(ultrasonic ${catkin_LIBRARIES})
 
 add_executable(distance_to_led src/distance_to_led.cpp)
