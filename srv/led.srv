@@ -1,7 +1,7 @@
 int8 led_id
 int32 color
-int8 brightness
+unsigned int8 brightness
 ---
 int8 led_id
 int32 color
-int8 brightness
+unsigned int8 brightness
