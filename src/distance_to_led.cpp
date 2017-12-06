@@ -8,13 +8,13 @@ pi::led srv;
 void callback(const sensor_msgs::Range::ConstPtr& msg)
 {
   ROS_INFO("distance = %fm", msg->range); 
-  int num=(msg->range)*20;
-  for(int i=0;i<num;i++){
+//  int num=((msg->range)*20;
+  for(int i=0;i<8;i++){
     if(i==8)  break;
     srv.request.led_id=i;
-    srv.request.color=0xFF003F;
-    srv.request.brightness=0xFF;
-    if((srv.request.led_id!=srv.response.led_id)|(srv.request.color!=srv.response.color)|(srv.request.brightness!=srv.response.brightness)){
+    srv.request.color=255;
+    srv.request.brightness=255;
+    if((srv.request.led_id!=srv.response.led_id)||(srv.request.color!=srv.response.color)||(srv.request.brightness!=srv.response.brightness)){
         if(sc.call(srv))
         {
             ROS_INFO("req : id=%d, color=%d, brightness=%d",srv.request.led_id,srv.request.color,srv.request.brightness);
