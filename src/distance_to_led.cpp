@@ -7,7 +7,7 @@ ros::ServiceClient sc;
 pi::led srv;
 void callback(const sensor_msgs::Range::ConstPtr& msg)
 {
-  ROS_INFO("distance = %dm", msg->range); 
+  ROS_INFO("distance = %fm", msg->range); 
   int num=(msg->range)*20;
   for(int i=0;i<num;i++){
     if(i==8)  break;

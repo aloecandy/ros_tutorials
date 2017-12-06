@@ -50,7 +50,7 @@ int main(int argc, char **argv)
         msg.radiation_type = msg.ULTRASOUND;
         msg.field_of_view = 0.5;
         msg.min_range=0.02; //2cm
-        msg.max_range=0.50; //50cm
+        msg.max_range=0.60; //60cm
         msg.range = read();
         msg.header.stamp=ros::Time::now();
         dist_pub.publish(msg);
