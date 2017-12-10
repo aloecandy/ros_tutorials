@@ -10,7 +10,7 @@
             <geometry>
                 <box size="0.5 0.5 0.5"/>
             </geometry>
-        </collsion>
+        </collision>
         <inertial>
             <mass value="1.0"/>
             <inertia ixx="0.015" iyy="0.0375" izz="0.0375" ixy="0" ixz="0" iyz="0"/>
@@ -28,7 +28,7 @@
             <geometry>
              <cylinder length="0.05" radius="0.1" />
             </geometry>
-        </collsion>
+        </collision>
         <inertial>
             <mass value="0.1"/>
             <inertia ixx="0.00083" iyy="0.00083" izz="0.000167" ixy="0" ixz="0" iyz="0"/>
@@ -52,7 +52,7 @@
             <geometry>
                 <cylinder length="0.05" radius="0.075"/>
             </geometry>
-        </collsion>
+        </collision>
         <inertial>
             <mass value="0.1"/>
             <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
@@ -76,7 +76,7 @@
             <geometry>
              <cylinder length="0.05" radius="0.1" />
             </geometry>
-        </collsion>
+        </collision>
         <inertial>
             <mass value="0.1"/>
             <inertia ixx="0.00083" iyy="0.00083" izz="0.000167" ixy="0" ixz="0" iyz="0"/>
@@ -100,7 +100,7 @@
             <geometry>
                 <cylinder length="0.05" radius="0.075"/>
             </geometry>
-        </collsion>
+        </collision>
         <inertial>
             <mass value="0.1"/>
             <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
@@ -127,7 +127,7 @@
             <geometry>
              <cylinder length="0.05" radius="0.25"/>
             </geometry>
-        </collsion>
+        </collision>
         <inertial>
             <mass value="0.5"/>
             <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
@@ -150,7 +150,7 @@
             <geometry>
                <cylinder length="0.05" radius="0.25"/>
             </geometry>
-        </collsion>
+        </collision>
         <inertial>
             <mass value="0.5"/>
             <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
@@ -175,7 +175,7 @@
             <geometry>
                 <box size="0.0015 0.07112 0.00889"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -197,7 +197,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_0_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -219,7 +219,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_1_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -241,7 +241,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_2_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -263,7 +263,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_3_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -285,7 +285,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_4_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -308,7 +308,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_5_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -331,7 +331,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_6_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -353,7 +353,7 @@
             <geometry>
                 <box size="0.0015 0.005 0.005"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="led_id_7_joint" type="fixed">
         <axis xyz="0 0 0"/>
@@ -374,7 +374,7 @@
             <geometry>
               <box size="0.02 0.04 0.02"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="sonar_joint" type="fixed">
         <parent link="base_link"/>
@@ -392,7 +392,7 @@
             <geometry>
               <cylinder length="0.08" radius="0.035"/>
             </geometry>
-        </collsion>
+        </collision>
     </link>
     <joint name="hokuyo_joint" type="fixed">
         <axis xyz="0 0 0" />
