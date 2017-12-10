@@ -5,4 +5,5 @@
     <include file="$(find gazebo_ros)/launch/willowgarage_world.launch"/>
     <!-- Spawn a m4k in Gazebo, taking the description from the     parameter server -->
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model m4k" />
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find mapping)/maps/willow.yaml"/>
 </launch>
